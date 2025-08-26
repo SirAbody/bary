@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0ea5a3" />
+    <title>باري دايت | متجر الأكل الصحي</title>
+    <meta name="description" content="باري دايت - متجر تجريبي للأكل الصحي: وجبة رز ودجاج، مشروب فواكه، ومياه. تصميم احترافي سريع ومتجاوب." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="/favicon.ico" />
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="container nav">
+            <div class="brand" aria-label="شعار باري دايت">
+                <div class="logo-circle" aria-hidden="true">BD</div>
+                <span class="logo-text" data-i18n="brand">باري دايت</span>
+            </div>
+            <nav class="nav-links" aria-label="روابط الموقع">
+                <a href="#products" data-i18n="nav.products">المنتجات</a>
+                <a href="#about" data-i18n="nav.about">نبذة</a>
+                <a href="#contact" data-i18n="nav.contact">تواصل</a>
+            </nav>
+            <button id="langToggle" class="lang-button" aria-label="تبديل اللغة">ع/EN</button>
+            <button id="menuButton" class="menu-button" aria-label="فتح القائمة" title="القائمة">☰</button>
+            <button id="cartButton" class="cart-button" aria-label="فتح السلة" title="السلة">
+                <span class="cart-icon" aria-hidden="true">🛒</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+    <!-- Intro animation overlay -->
+    <div class="intro-overlay" id="intro" aria-hidden="true">
+        <div class="intro-logo">
+            <div class="logo-circle">BD</div>
+            <span class="logo-text" data-i18n="brand">باري دايت</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <h1 class="fade-in-up" data-i18n="hero.title">خيارك الذكي للأكل الصحي</h1>
+                <p class="fade-in-up delay-1" data-i18n="hero.subtitle">وجبات متوازنة ومشروبات طبيعية، بتصميم سريع ومتجاوب.</p>
+                <div class="hero-actions fade-in-up delay-2">
+                    <a href="#products" class="btn btn-primary" data-i18n="hero.ctaShop">تسوق الآن</a>
+                    <a href="#about" class="btn btn-ghost" data-i18n="hero.ctaLearn">اعرف أكثر</a>
+                </div>
+            </div>
+            <div class="hero-media">
+                <div class="blob"></div>
+                <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=800&auto=format&fit=crop&q=60" alt="وجبة صحية" loading="lazy" class="hero-img" />
+            </div>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true" data-i18n="hero.scroll">اسحب للأسفل</div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section" id="products">
+        <div class="container">
+            <div class="section-head">
+                <h2 data-i18n="products.title">منتجاتنا</h2>
+                <p data-i18n="products.subtitle">مختارة بعناية لأسلوب حياة صحي</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <article class="card fade-observe" data-product-id="1" data-name="وجبة رز ودجاج" data-price="29.00" data-calories="520">
+                    <div class="card-media">
+                        <span class="badge" data-i18n="badge.healthy">صحي</span>
+                        <img src="rise%20and%20checken.webp" alt="وجبة رز ودجاج صحية" loading="lazy" />
+                    </div>
+                    <div class="card-body">
+                        <h3 data-i18n="product1.name">وجبة رز ودجاج صحية</h3>
+                        <p class="muted" data-i18n="product1.desc">صدر دجاج مشوي مع أرز بني وخضار موسمية.</p>
+                        <div class="meta">
+                            <span class="price">29 ر.س</span>
+                            <span class="calories" title="السعرات الحرارية"><span class="cal-val">520</span> <span data-i18n="meta.calories">سعرة</span></span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-i18n="actions.addToCart">أضف إلى السلة</button>
+                    </div>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="card fade-observe" data-product-id="2" data-name="مشروب فواكه صحي" data-price="14.00" data-calories="180">
+                    <div class="card-media">
+                        <span class="badge" data-i18n="badge.healthy">صحي</span>
+                        <img src="fruits_juice.jpg" alt="مشروب عصير فواكه صحي" loading="lazy" />
+                    </div>
+                    <div class="card-body">
+                        <h3 data-i18n="product2.name">مشروب فواكه صحي</h3>
+                        <p class="muted" data-i18n="product2.desc">مزيج طبيعي من التوت والمانجو والبرتقال بدون سكر مضاف.</p>
+                        <div class="meta">
+                            <span class="price">14 ر.س</span>
+                            <span class="calories" title="السعرات الحرارية"><span class="cal-val">180</span> <span data-i18n="meta.calories">سعرة</span></span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-i18n="actions.addToCart">أضف إلى السلة</button>
+                    </div>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="card fade-observe" data-product-id="3" data-name="ماء نقي" data-price="3.00" data-calories="0">
+                    <div class="card-media">
+                        <span class="badge" data-i18n="badge.healthy">صحي</span>
+                        <img src="bottle_water.jpg" alt="مياه طبيعية" loading="lazy" />
+                    </div>
+                    <div class="card-body">
+                        <h3 data-i18n="product3.name">مياه نقية</h3>
+                        <p class="muted" data-i18n="product3.desc">مياه نقية منعشة معادن متوازنة.</p>
+                        <div class="meta">
+                            <span class="price">3 ر.س</span>
+                            <span class="calories" title="السعرات الحرارية"><span class="cal-val">0</span> <span data-i18n="meta.calories">سعرة</span></span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-i18n="actions.addToCart">أضف إلى السلة</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section alt" id="about">
+        <div class="container">
+            <div class="section-head">
+                <h2 data-i18n="about.title">عن باري دايت</h2>
+                <p data-i18n="about.subtitle">نسعى لتقديم خيارات صحية بطعم رائع وسعر مناسب.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card fade-observe">
+                    <h3 data-i18n="about.fresh.title">مكونات طازجة</h3>
+                    <p data-i18n="about.fresh.desc">نستخدم مكونات طبيعية وطازجة يوميًا لضمان جودة أفضل لكل وجبة.</p>
+                </div>
+                <div class="about-card fade-observe">
+                    <h3 data-i18n="about.balance.title">تغذية متوازنة</h3>
+                    <p data-i18n="about.balance.desc">نوازن بين البروتينات والكربوهيدرات والدهون الصحية لتغذية متكاملة.</p>
+                </div>
+                <div class="about-card fade-observe">
+                    <h3 data-i18n="about.delivery.title">جاهز للتوصيل</h3>
+                    <p data-i18n="about.delivery.desc">اختر وجبتك المفضلة، أضفها للسلة، واختر الدفع عند الاستلام.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Footer -->
+    <footer class="footer" id="contact">
+        <div class="container footer-inner">
+            <div class="brand">
+                <div class="logo-circle">BD</div>
+                <span class="logo-text">باري دايت</span>
+            </div>
+            <div class="footer-links">
+                <a href="#home" data-i18n="footer.home">الرئيسية</a>
+                <a href="#products" data-i18n="footer.products">المنتجات</a>
+                <a href="#about" data-i18n="footer.about">نبذة</a>
+            </div>
+            <p class="copyright">© <span id="year"></span> <span data-i18n="brand">باري دايت</span>. <span data-i18n="footer.rights">جميع الحقوق محفوظة.</span></p>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <aside class="cart" id="cartDrawer" aria-hidden="true" aria-labelledby="cartTitle">
+        <div class="cart-header">
+            <h3 id="cartTitle">سلة التسوق</h3>
+            <button id="closeCart" class="icon-btn" aria-label="إغلاق السلة">✕</button>
+        </div>
+        <div class="cart-body" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-summary">
+                <span>الإجمالي:</span>
+                <strong id="cartTotal">0 ر.س</strong>
+            </div>
+            <button id="checkoutBtn" class="btn btn-primary" disabled>متابعة للدفع</button>
+        </div>
+    </aside>
+
+    <!-- Mobile Nav Drawer -->
+    <aside class="nav-drawer" id="navDrawer" aria-hidden="true" aria-label="القائمة">
+        <div class="nav-drawer-header">
+            <div class="brand">
+                <div class="logo-circle">BD</div>
+                <span class="logo-text" data-i18n="brand">باري دايت</span>
+            </div>
+            <button id="closeNav" class="icon-btn" aria-label="إغلاق القائمة">✕</button>
+        </div>
+        <nav class="nav-drawer-links">
+            <a href="#products" data-i18n="nav.products">المنتجات</a>
+            <a href="#about" data-i18n="nav.about">نبذة</a>
+            <a href="#contact" data-i18n="nav.contact">تواصل</a>
+        </nav>
+        <div class="nav-drawer-actions">
+            <button id="langToggleDrawer" class="btn btn-ghost">ع/EN</button>
+        </div>
+    </aside>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" hidden></div>
+
+    <!-- Checkout Modal -->
+    <dialog id="checkoutModal" class="modal">
+        <form method="dialog" class="modal-content" id="checkoutForm">
+            <div class="modal-header">
+                <h3 data-i18n="checkout.title">الدفع عند الاستلام</h3>
+                <button type="button" class="icon-btn" id="closeModal" aria-label="إغلاق">✕</button>
+            </div>
+            <div class="modal-body">
+                <label class="field">
+                    <span data-i18n="checkout.fullName">الاسم الكامل</span>
+                    <input required name="fullName" data-i18n-placeholder-"checkout.fullNamePh" placeholder="مثال: محمد أحمد" />
+                </label>
+                <label class="field">
+                    <span data-i18n="checkout.phone">رقم الجوال</span>
+                    <input required name="phone" pattern="^[0-9\-\+\s]{8,15}$" data-i18n-placeholder-"checkout.phonePh" placeholder="05xxxxxxxx" />
+                </label>
+                <label class="field">
+                    <span data-i18n="checkout.address">العنوان</span>
+                    <input required name="address" data-i18n-placeholder-"checkout.addressPh" placeholder="المدينة، الحي، الشارع" />
+                </label>
+                <div class="summary-box" id="orderSummary"></div>
+                <div class="cod-note" data-i18n="checkout.codNote">سيتم الدفع نقدًا عند استلام الطلب.</div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" data-i18n="checkout.confirm">تأكيد الطلب</button>
+                <button type="button" class="btn btn-ghost" id="cancelOrder" data-i18n="checkout.cancel">إلغاء</button>
+            </div>
+        </form>
+    </dialog>
+
+    <!-- Toaster & ToTop -->
+    <div id="toast" class="toast" aria-live="polite"></div>
+    <button id="toTop" class="to-top" aria-label="العودة للأعلى" title="أعلى">↑</button>
+
+    <script src="app.js" defer></script>
+    <noscript>يرجى تفعيل JavaScript للحصول على تجربة كاملة.</noscript>
+    
+    <!-- Tiny inline script to set year early -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const y = document.getElementById('year');
+        if (y) y.textContent = new Date().getFullYear();
+      });
+    </script>
+    
+    <!-- Schema.org JSON-LD for basic SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "باري دايت",
+      "image": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=800&auto=format&fit=crop&q=60",
+      "description": "متجر تجريبي للأكل الصحي",
+      "servesCuisine": "Healthy",
+      "paymentAccepted": "Cash",
+      "priceRange": "$$"
+    }
+    </script>
+    
+    <!-- Progressive enhancement: reduces motion if user prefers -->
+    <script>
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('reduced-motion');
+      }
+    </script>
+    
+    <!-- Lazy load images via loading=lazy attribute above and intersection observer in app.js -->
+    
+</body>
+
+</html>
+
+
