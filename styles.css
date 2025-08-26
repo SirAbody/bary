@@ -95,6 +95,12 @@ body {
 /* About */
 .about-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
 .about-card { background: var(--white); padding: 18px; border-radius: var(--radius); box-shadow: var(--shadow-md); }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 18px; }
+.chip { background: #f7fbfc; border: 1px solid #e6f0f2; color: var(--blue-700); padding: 6px 10px; border-radius: 999px; font-weight: 700; font-size: 13px; }
+.stats-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 18px; }
+.stat-card { background: var(--white); border-radius: 14px; padding: 14px; text-align: center; box-shadow: var(--shadow-md); }
+.stat-number { font-size: 22px; font-weight: 800; color: var(--blue-700); }
+.stat-label { color: var(--muted); }
 
 /* Footer */
 .footer { background: var(--white); border-top: 1px solid #e6f0f2; margin-top: 28px; }
@@ -197,6 +203,7 @@ body {
   .section { padding: 72px 0; }
   .products-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .about-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-grid { grid-template-columns: repeat(3, 1fr); }
   .footer-inner { grid-template-columns: 1fr 1fr 1fr; justify-items: stretch; }
   .footer-inner .brand { justify-self: start; }
   .footer-links { justify-self: center; }
